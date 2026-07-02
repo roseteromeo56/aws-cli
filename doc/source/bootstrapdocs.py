@@ -1,11 +1,9 @@
-import json
 import os
 import subprocess
 import sys
 
 RST_GENERATION_SCRIPT = 'htmlgen'
-script_path = os.path.join(os.path.dirname(__file__),
-                           RST_GENERATION_SCRIPT)
+script_path = os.path.join(os.path.dirname(__file__), RST_GENERATION_SCRIPT)
 os.environ['PATH'] += ':.'
 rc = subprocess.call([sys.executable, script_path], env=os.environ)
 if rc != 0:
